@@ -1,0 +1,68 @@
+*mentorcism.txt*	TODO
+
+==============================================================================
+CONTENTS                                        *mentorcism*   *mentorcism-contents*
+
+    Installation................................: |mentorcism-installation|
+    Usage.......................................: |mentorcism-usage|
+    Settings....................................: |mentorcism-settings|
+    Internals...................................: |mentorcism-internals|
+    Issues......................................: |mentorcism-issues|
+
+
+==============================================================================
+INSTALLATION                                            *mentorcism-installation*
+
+There are several ways to install the plugin. The recommended one is by using
+Tim Pope's pathogen (http://www.vim.org/scripts/script.php?script_id=2332). In
+that case, you can clone the plugin's git repository like so:
+>
+    git clone https://github.com/AndrewRadev/mentorcism.vim ~/.vim/bundle/mentorcism
+<
+If your vim configuration is under git version control, you could also set up
+the repository as a submodule, which would allow you to update more easily.
+The command is (provided you're in ~/.vim):
+>
+    git submodule add https://github.com/AndrewRadev/mentorcism.vim bundle/mentorcism
+<
+
+Another way is to simply copy all the essential directories inside the ~/.vim
+directory: TODO list of directories
+
+
+==============================================================================
+USAGE                                                          *mentorcism-usage*
+
+Two commands are available that simply delegate to the `mentorcism`
+command-line tool:
+
+>
+    :Mentorcism download <task-name> --track=<track-name>
+<
+Downloads the task, but also does a "cd" into the directory the tool prints,
+and edits the file `README.md` in that directory.
+>
+    :Mentorcism submit
+<
+Submits the current file.
+
+
+==============================================================================
+SETTINGS                                                    *mentorcism-settings*
+
+TODO
+
+
+==============================================================================
+INTERNALS                                                  *mentorcism-internals*
+
+TODO
+
+==============================================================================
+ISSUES                                                        *mentorcism-issues*
+
+Any issues and suggestions are very welcome on the github bugtracker:
+https://github.com/AndrewRadev/mentorcism.vim/issues
+
+
+vim:tw=78:sw=4:ft=help:norl:
