@@ -37,10 +37,10 @@ Two commands are available that simply delegate to the `exercism` command-line
 tool:
 
 >
-    :Exercism download <task-name> --track=<track-name>
+    :Exercism download --exercise=<name> --track=<track-name>
 <
-Downloads the task, but also does a "cd" into the directory the tool prints,
-and edits the file `README.md` in that directory.
+Downloads the exercise, but also does a "cd" into the directory the tool
+prints, and edits the file `README.md` in that directory.
 >
     :Exercism submit
 <
