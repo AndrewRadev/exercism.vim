@@ -1,8 +1,8 @@
-function! mentorcism#Download(args)
+function! exercism#Download(args)
   let args = map(a:args, 'shellescape(v:val)')
-  let output = systemlist('mentorcism download '.join(args, ' '))
+  let output = systemlist('exercism download '.join(args, ' '))
   if v:shell_error
-    echoerr join(output, "\n")
+    call s:ExternalError(output)
     return
   endif
 
@@ -11,15 +11,21 @@ function! mentorcism#Download(args)
   exe 'tabnew '.fnamemodify(download_dir .'/README.md', ':~:.')
 endfunction
 
-function! mentorcism#Submit(args)
+function! exercism#Submit(args)
   let args = map(a:args, 'shellescape(v:val)')
   if len(args) == 0
     let args = [expand('%')]
   endif
 
-  let output = systemlist('mentorcism submit '.join(args, ' '))
+  let output = systemlist('exercism submit '.join(args, ' '))
   if v:shell_error
-    echoerr join(output, "\n")
+    call s:ExternalError(output)
     return
   endif
+endfunction
+
+function! s:ExternalError(output)
+  for line in a:output
+    echoerr line
+  endfor
 endfunction

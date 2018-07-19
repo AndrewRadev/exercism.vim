@@ -1,29 +1,29 @@
-*mentorcism.txt*	TODO
+*exercism.txt*	TODO
 
 ==============================================================================
-CONTENTS                                        *mentorcism*   *mentorcism-contents*
+CONTENTS                                        *exercism*   *exercism-contents*
 
-    Installation................................: |mentorcism-installation|
-    Usage.......................................: |mentorcism-usage|
-    Settings....................................: |mentorcism-settings|
-    Internals...................................: |mentorcism-internals|
-    Issues......................................: |mentorcism-issues|
+    Installation................................: |exercism-installation|
+    Usage.......................................: |exercism-usage|
+    Settings....................................: |exercism-settings|
+    Internals...................................: |exercism-internals|
+    Issues......................................: |exercism-issues|
 
 
 ==============================================================================
-INSTALLATION                                            *mentorcism-installation*
+INSTALLATION                                            *exercism-installation*
 
 There are several ways to install the plugin. The recommended one is by using
 Tim Pope's pathogen (http://www.vim.org/scripts/script.php?script_id=2332). In
 that case, you can clone the plugin's git repository like so:
 >
-    git clone https://github.com/AndrewRadev/mentorcism.vim ~/.vim/bundle/mentorcism
+    git clone https://github.com/AndrewRadev/exercism.vim ~/.vim/bundle/exercism
 <
 If your vim configuration is under git version control, you could also set up
 the repository as a submodule, which would allow you to update more easily.
 The command is (provided you're in ~/.vim):
 >
-    git submodule add https://github.com/AndrewRadev/mentorcism.vim bundle/mentorcism
+    git submodule add https://github.com/AndrewRadev/exercism.vim bundle/exercism
 <
 
 Another way is to simply copy all the essential directories inside the ~/.vim
@@ -31,38 +31,38 @@ directory: TODO list of directories
 
 
 ==============================================================================
-USAGE                                                          *mentorcism-usage*
+USAGE                                                          *exercism-usage*
 
-Two commands are available that simply delegate to the `mentorcism`
-command-line tool:
+Two commands are available that simply delegate to the `exercism` command-line
+tool:
 
 >
-    :Mentorcism download <task-name> --track=<track-name>
+    :Exercism download <task-name> --track=<track-name>
 <
 Downloads the task, but also does a "cd" into the directory the tool prints,
 and edits the file `README.md` in that directory.
 >
-    :Mentorcism submit
+    :Exercism submit
 <
 Submits the current file.
 
 
 ==============================================================================
-SETTINGS                                                    *mentorcism-settings*
+SETTINGS                                                    *exercism-settings*
 
 TODO
 
 
 ==============================================================================
-INTERNALS                                                  *mentorcism-internals*
+INTERNALS                                                  *exercism-internals*
 
 TODO
 
 ==============================================================================
-ISSUES                                                        *mentorcism-issues*
+ISSUES                                                        *exercism-issues*
 
 Any issues and suggestions are very welcome on the github bugtracker:
-https://github.com/AndrewRadev/mentorcism.vim/issues
+https://github.com/AndrewRadev/exercism.vim/issues
 
 
 vim:tw=78:sw=4:ft=help:norl:
