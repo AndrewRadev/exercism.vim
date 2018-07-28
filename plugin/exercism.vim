@@ -1,8 +1,8 @@
-if exists('g:loaded_mentorcism') || &cp
+if exists('g:loaded_exercism') || &cp
   finish
 endif
 
-let g:loaded_mentorcism = '0.0.1' " version number
+let g:loaded_exercism = '0.0.1' " version number
 let s:keepcpo = &cpo
 set cpo&vim
 
