@@ -1,7 +1,3 @@
-*More instructions, settings and better completion coming up soon (hopefully).*
-
-<hr>
-
 Two commands are available that simply delegate to the `exercism` command-line tool. The first is "download":
 
 ``` vim
