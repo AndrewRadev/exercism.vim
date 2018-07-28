@@ -21,8 +21,20 @@ function! s:Exercism(...)
     return
   endif
 endfunction
-function! s:ExercismComplete(_argument_lead, _command_line, _cursor_position)
-  return join(["download", "submit"], "\n")
+function! s:ExercismComplete(argument_lead, command_line, _cursor_position)
+  let subcommand = matchstr(a:command_line, '^E\%[xercism]\s\+\zs\w\+\ze\s\+')
+
+  if subcommand ==# 'submit'
+    return join(getcompletion(a:argument_lead, 'file'), "\n")
+  elseif subcommand ==# 'download'
+    return join(["--track=", "--exercise=", "--uuid="], "\n")
+  elseif subcommand ==# ''
+    " No subcommand yet, complete subcommands
+    return join(["download", "submit"], "\n")
+  else
+    " Unknown subcommand, no completion
+    return ""
+  endif
 endfunction
 
 let &cpo = s:keepcpo
